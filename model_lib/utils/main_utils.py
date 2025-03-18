@@ -1,4 +1,3 @@
-# Copyright (c) CAIRI AI Lab. All rights reserved
 
 import os
 import logging
