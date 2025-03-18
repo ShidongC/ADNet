@@ -1,4 +1,3 @@
-# Copyright (c) CAIRI AI Lab. All rights reserved
 
 from .metrics import metric, metric_2
 from .recorder import Recorder
