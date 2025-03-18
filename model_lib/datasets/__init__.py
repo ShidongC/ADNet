@@ -1,4 +1,3 @@
-# Copyright (c) CAIRI AI Lab. All rights reserved
 
 from .dataloader_wind_10m_area1 import WindDataset1
 from .dataloader import load_data
