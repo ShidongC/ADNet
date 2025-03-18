@@ -1,4 +1,3 @@
-# Copyright (c) CAIRI AI Lab. All rights reserved
 
 from .config_utils import Config, check_file_exist
 from .main_utils import (set_seed, print_log, output_namespace, check_dir, get_dataset,
