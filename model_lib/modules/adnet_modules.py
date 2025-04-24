@@ -77,14 +77,13 @@ class MSCA(nn.Module):
 
     def forward(self, x):
         b, c, _, _ = x.size()
-        # feature descriptor on the global spatial information
+
         y = self.avg_pool(x)
 
-        # Two different branches of ECA module
         y_local = self.conv(y.squeeze(-1).transpose(-1, -2)).transpose(-1, -2).unsqueeze(-1).expand_as(x)
         y_global = self.fc(y.view(b, c)).view(b, c, 1, 1).expand_as(x)
         y = y_local + y_global
-        # Multi-scale information fusion
+
         y = self.sigmoid(y)
 
         return y
